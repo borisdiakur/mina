@@ -1,0 +1,54 @@
+$font-icon-cat: "\ea01";
+
+@font-face {
+    font-family: icons;
+    src: url("../../assets/fonts/icons/icons.eot");
+    src: url("../../assets/fonts/icons/icons.eot?#iefix") format("embedded-opentype"), url("../../assets/fonts/icons/icons.woff2") format("woff2"), url("../../assets/fonts/icons/icons.woff") format("woff"), url("../../assets/fonts/icons/icons.ttf") format("truetype"); 
+    font-style: normal;
+    font-weight: 400;
+}
+
+%font-icon {
+    display: inline-block;
+    transform: translate(0, 0);
+    text-rendering: auto;
+    font: normal normal 400 14px/1 icons;
+    font-size: inherit;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+}
+
+.font-icon {
+    @extend %font-icon;
+}
+
+.font-icon-lg {
+    vertical-align: -15%;
+    line-height: 0.75em;
+    font-size: 1.33333333em;
+}
+
+.font-icon-2x {
+    font-size: 2em;
+}
+
+.font-icon-3x {
+    font-size: 3em;
+}
+
+.font-icon-4x {
+    font-size: 4em;
+}
+
+.font-icon-5x {
+    font-size: 5em;
+}
+
+.font-icon-fw {
+    width: 1.28571429em;
+    text-align: center;
+}
+
+.font-icon-cat::before {
+    content: "\ea01";
+}

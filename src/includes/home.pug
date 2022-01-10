@@ -1,0 +1,133 @@
+mixin home(lang)
+    - lang = lang || 'de'
+    article
+        section.article-content
+            .article-body
+                .wp-block-cover-image.has-background-dim.has-left-content.alignfull(style="background-image: url('/images/mina_nagata_poster.jpg')")
+                    p.wp-block-cover-image-text Mina Nagata
+                ul
+                    li
+                        em!= i18n[lang].home.sub_heading.qualified_piano_lessons
+                    li
+                        em= i18n[lang].home.sub_heading.piano_music_for
+
+                .wp-block-spacer(style='height: 20px')
+
+                h2#mina-nagata= i18n[lang].home.home.heading
+                figure.wp-block-image.alignleft
+                    img.wp-image-32(src='/images/mina_nagata_portrait.jpg' alt='')
+                p= i18n[lang].home.home.about_mina
+
+                .wp-block-spacer(style='height: 20px')
+
+                h2#audio-samples= i18n[lang].home.audio_samples.heading
+                figure.wp-block-image.alignright
+                    img.wp-image-40(src='/images/mina_nagata_yuko_ellinger_2.jpg' alt='Yuko Ellinger - ' + i18n[lang].home.shared.piano + ' & Mina Nagata - ' + i18n[lang].home.shared.piano)
+                p(style='text-align: right')
+                    em!= 'Nikolai&nbsp;Kapustin<br>Paraphrase in Dizzy Gillespies Manteca ' + i18n[lang].home.audio_samples.for_two_pianos + ', Op.&nbsp;129 '
+                    a(href='https://youtu.be/wz54Rv7DnXU' target='_blank' rel='noreferrer noopener') https://youtu.be/wz54Rv7DnXU
+
+                .wp-block-spacer(style='height: 20px')
+
+                figure.wp-block-image.alignleft
+                    img.wp-image-46(src='/images/mina_nagata_yuko_ellinger_3.jpg' alt='Yuko Ellinger - ' + i18n[lang].home.shared.piano + ' & Mina Nagata - ' + i18n[lang].home.shared.piano)
+                p(style='text-align: left')
+                    em Bach / Kurtag, Gottes Zeit ist die allerbeste Zeit, BWV 106
+                    br
+                    em= 'Yuko Ellinger – Piano & Mina Nagata – ' + i18n[lang].home.shared.piano + ' '
+                    a(href='https://youtu.be/KkKXUAdgql8' target='_blank' rel='noreferrer noopener') https://youtu.be/KkKXUAdgql8
+
+                .wp-block-spacer(style='height: 20px')
+
+                h2#concerts= i18n[lang].home.concerts.heading
+                p(style='text-align: left')
+                    img.wp-image-84.size-full.alignnone(src='/images/tierisches_klavierkonzert_mina_nagata_azusa_tomimoto.png' alt='Tierisches Klavierkonzert – ein Duo-Konzert für die ganze Familie')
+                p(style='text-align: left')
+                    em
+                        strong Tierisches Klavierkonzert – ein Duo-Konzert für die ganze Familie
+                    br
+                    em
+                        | 8/3/2020,
+                        br
+                        | Ev. Versöhnungsgemeinde,
+                    em Kirchbachstraße 44, 65191 Wiesbaden
+                    br
+                    em= 'Azusa Tomimoto – ' + i18n[lang].home.shared.piano
+                    br
+                    em= 'Mina Nagata – ' + i18n[lang].home.shared.piano
+                figure.wp-block-image.alignleft
+                    img.alignleft.wp-image-83.size-full(src='/images/musikalische_weltreise.png' alt='Musikalische Weltreise, Mina Nagata & Yuki Mukai')
+                p(style='text-align: left')
+                    em
+                        strong= i18n[lang].home.shared.duet
+                    br
+                    em
+                        | 10/11/2019,
+                        br
+                    em Ev. Maria-Magdalena-Gemeinde
+                    em Hebbelstr. 60, Mainz Lerchenberg
+                    em
+                        | Manuel Ponce, Emanuel de Falla, Frédéric Chopin, Alfred
+                        | Schnittke, Michio Miyaji
+                    br
+                    em= 'Yuki Mukai – ' + i18n[lang].home.shared.violin
+                    br
+                    em= 'Mina Nagata – ' + i18n[lang].home.shared.piano
+
+                .wp-block-spacer(style='height: 20px')
+
+                figure.wp-block-image.alignright
+                    img.wp-image-49.alignright.size-full(src='/images/concert_mina_nagata_yuko_ellinger.jpg' alt='Concert Mina Nagata & Yuko Ellinger')
+                p(style='text-align: right')
+                    em
+                        strong= i18n[lang].home.shared.piano_duet
+                        br
+                        | 10/2/2018, in Sendai /
+                        | Japan
+                    em 14/2/2018 in Kumamoto / Japan
+                    em
+                        | Eilenberg,
+                        br
+                        | Gershwin etc.
+                    br
+                    em= 'Yuko Ellinger – ' + i18n[lang].home.shared.piano
+                    br
+                    em= 'Mina Nagata – ' + i18n[lang].home.shared.piano
+
+                .wp-block-spacer(style='height: 40px')
+
+                figure.wp-block-image.alignleft
+                    img.wp-image-51(src='/images/concert_mina_nagata_yuki_mukai_masami_sato.jpg' alt='Concert Mina Nagata, Yuki Mukai, Masami Sato')
+                p(style='text-align: left')
+                    strong
+                        em Trio
+                    br
+                    em
+                        | 27/5/2018,
+                        br
+                        | Musiksaal Alte Fabrik, Landau, an der WS
+                    br
+                    em!= 'Mendelssohn, Schubert, Bartok etc.<br>Masami Sato – Sopran Yuki Mukai – ' + i18n[lang].home.shared.violin + '<br>Mina Nagata' + i18n[lang].home.shared.piano
+
+                .wp-block-spacer(style='height: 60px')
+
+                h2#offerings= i18n[lang].home.offerings.heading
+                h3= i18n[lang].home.offerings.piano_lessons.heading
+                ul
+                    each item in i18n[lang].home.offerings.piano_lessons.list
+                        li= item
+                h3= i18n[lang].home.offerings.musical_accompaniment.heading
+                ul
+                    each item in i18n[lang].home.offerings.musical_accompaniment.list
+                        li= item
+                h3= i18n[lang].home.offerings.concert.heading
+                ul
+                    each item in i18n[lang].home.offerings.concert.list
+                        li= item
+
+                .wp-block-spacer(style='height: 20px')
+
+                h2#contact= i18n[lang].home.contact.heading
+                p(style='text-align: left')
+                    span= i18n[lang].home.contact.leave_me_a_note + ': '
+                    a(href='mailto:hallo@minanagata.de' target='_blank' rel='noopener noreferrer') hallo@minanagata.de

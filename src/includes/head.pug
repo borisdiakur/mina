@@ -1,0 +1,54 @@
+mixin head(lang)
+    - lang = lang || 'de'
+    head
+        script.
+          document.documentElement.classList.remove('no-js')
+        meta(charset='UTF-8')
+        title Mina Nagata
+
+        meta(property='og:site_name' content='minanagata')
+        meta(property='og:locale' content=lang === 'de' ? 'de-DE' : 'en-GB')
+        meta(property='og:title' content='Mina Nagata')
+        meta(property='og:url' content='https://minanagata.de')
+        meta(property='og:type' content='website')
+        meta(property='og:image' content='https://minanagata.de/images/mina_nagata_poster.jpg')
+        meta(property='og:description' content=i18n[lang].meta.description)
+
+        script(type='application/ld+json').
+            [
+                {
+                    "@context": "https://schema.org",
+                    "@type": "WebSite",
+                    "name": "minanagata",
+                    "url": "https://minanagata.de"
+                },
+                {
+                    "@context": "https://schema.org",
+                    "@type": "Person",
+                    "url": "https://minanagata.de",
+                    "contactPoint": [
+                        {
+                            "@type": "ContactPoint",
+                            "url": "https://minanagata.de/#contact",
+                            "contactType": "customer support",
+                            "availableLanguage": ["German", "English", "Japanese"]
+                        }
+                    ]
+                }
+            ]
+        meta(name='description' content=i18n[lang].meta.description)
+        meta(http-equiv='Content-Type' content='text/html; charset=UTF-8')
+        meta(http-equiv='X-UA-Compatible' content='IE=edge')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+
+        link(rel='icon' type='image/png' sizes='32x32' href='/favicon-32x32.png')
+        link(rel='icon' type='image/png' sizes='16x16' href='/favicon-16x16.png')
+
+        script(type='module' src='/src/index.async.js' async='')
+
+        link(rel='dns-prefetch' href='//s.w.org')
+        link(rel='canonical' href='https://minanagata.de/')
+        link(rel='shortlink' href='https://minanagata.de/')
+        link(hreflang='de' href='https://minanagata.de/' rel='alternate')
+        link(hreflang='en' href='https://minanagata.de/en/' rel='alternate')
+        link(hreflang='x-default' href='https://minanagata.de/' rel='alternate')
