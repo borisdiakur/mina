@@ -4,6 +4,7 @@ import vitePluginPug from 'vite-plugin-pug'
 
 module.exports = defineConfig({
 	plugins: [vitePluginPug()],
+	base: './',
 	build: {
 		rollupOptions: {
 			input: {
