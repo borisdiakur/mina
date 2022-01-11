@@ -4,7 +4,7 @@ mixin header(lang, path)
     header#header.header
         .header__wrapper
             h1.header__logo(role='banner')
-                a.piano(href='/' + i18n[lang].path_prefix aria-label='Mina Nagata' rel='home')
+                a.piano(href=base + i18n[lang].path_prefix aria-label='Mina Nagata' rel='home')
                     .piano__top
                     .piano__bottom
                     .piano__left
@@ -15,17 +15,17 @@ mixin header(lang, path)
                 span.menu__toggle-label.menu__toggle-label--close.hide-from-wide
                 ul#menu__list.menu__list
                     li.menu-item
-                        a(target='' href='/' + i18n[lang].path_prefix + '#top')= i18n[lang].nav.home
+                        a(target='' href=base + i18n[lang].path_prefix + '#top')= i18n[lang].nav.home
                     li.menu-item
-                        a(target='' href='/' + i18n[lang].path_prefix + '#mina-nagata') Mina Nagata
+                        a(target='' href=base + i18n[lang].path_prefix + '#mina-nagata') Mina Nagata
                     li.menu-item
-                        a(target='' href='/' + i18n[lang].path_prefix + '#audio-samples')= i18n[lang].nav.audio_samples
+                        a(target='' href=base + i18n[lang].path_prefix + '#audio-samples')= i18n[lang].nav.audio_samples
                     li.menu-item
-                        a(target='' href='/' + i18n[lang].path_prefix + '#concerts')= i18n[lang].nav.concerts
+                        a(target='' href=base + i18n[lang].path_prefix + '#concerts')= i18n[lang].nav.concerts
                     li.menu-item
-                        a(target='' href='/' + i18n[lang].path_prefix + '#offerings')= i18n[lang].nav.offerings
+                        a(target='' href=base + i18n[lang].path_prefix + '#offerings')= i18n[lang].nav.offerings
                     li.menu-item
-                        a(target='' href='/' + i18n[lang].path_prefix + '#contact')= i18n[lang].nav.contact
+                        a(target='' href=base + i18n[lang].path_prefix + '#contact')= i18n[lang].nav.contact
                     li.menu-item
-                        a(target='' href=(lang === 'de' ? '/en/' + path : '/' + path))= lang === 'de' ? 'EN' : 'DE'
+                        a(target='' href=(lang === 'de' ? base + 'en/' + path : base + path))= lang === 'de' ? 'EN' : 'DE'
                 a.scroll-to-top(href='#top' aria-label=i18n[lang].nav.scroll_to_top) ⇥

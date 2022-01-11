@@ -2,8 +2,10 @@ const { resolve } = require('path')
 const { defineConfig } = require('vite')
 import vitePluginPug from 'vite-plugin-pug'
 
+const base = process.env.APP_BASE || '/'
 module.exports = defineConfig({
-	plugins: [vitePluginPug()],
+	plugins: [vitePluginPug(undefined, { base })],
+	base,
 	build: {
 		rollupOptions: {
 			input: {

@@ -35,7 +35,9 @@ jobs:
               args: [--frozen-lockfile]
 
       - name: Build
-        run: node ./node_modules/.bin/vite build --base=/mina/
+        run: pnpm run build
+        env:
+          APP_BASE: /chacka/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
