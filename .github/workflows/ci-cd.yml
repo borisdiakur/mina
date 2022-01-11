@@ -35,7 +35,9 @@ jobs:
               args: [--frozen-lockfile]
 
       - name: Build
-        run: APP_BASE="/chacka/" pnpm run build
+        run: pnpm run build
+        env:
+          APP_BASE: /mina/
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@4.1.4
