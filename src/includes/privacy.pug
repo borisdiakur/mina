@@ -15,8 +15,8 @@ mixin privacy(lang)
                 h2= i18n[lang].privacy_policy.webhosting.heading
                 p= i18n[lang].privacy_policy.webhosting.provider_intro
                 p
-                    em LiWiNeA GmbH, Zum Haunert 22, 59519 Möhnesee, Germany
-                p= i18n[lang].privacy_policy.webhosting.provider_privacy_policy
+                    em GitHub Inc., 88 Colin P Kelly Jr Street San Francisco, CA 94107 United States
+                p!= i18n[lang].privacy_policy.webhosting.provider_privacy_policy
                 p!= i18n[lang].privacy_policy.webhosting.provider_outro
                 h2= i18n[lang].privacy_policy.storage.heading
                 p= i18n[lang].privacy_policy.storage.text
@@ -31,8 +31,9 @@ mixin privacy(lang)
                             span= ': '
                             span= item.text
                             if (item.sub_list)
-                                each sub_item in item.sub_list
-                                    li= sub_item
+                                ul
+                                    each sub_item in item.sub_list
+                                        li= sub_item
                 h2= i18n[lang].privacy_policy.withdrawl.heading
                 p!= i18n[lang].privacy_policy.withdrawl.text
                 h2= i18n[lang].privacy_policy.safety_measures.heading
@@ -41,10 +42,11 @@ mixin privacy(lang)
                 p= i18n[lang].privacy_policy.valid_until.text
                 p
                     span= i18n[lang].privacy_policy.created_with.this_privacy_policy
+                    span= ' '
                     a.externalLink(href='https://privacy.sos-right.com' target='_blank' rel='noopener') SOS Recht.
-                    | .
+                    span= ' '
                     a(href='https://datenschutz.sos-recht.de/dsgvo-datenschutz-generator/' target='_blank')= i18n[lang].privacy_policy.created_with.here
-                    span= i18n[lang].privacy_policy.created_with.is_an_offer_of
+                    span= ' ' + i18n[lang].privacy_policy.created_with.is_an_offer_of + ' '
                     a.externalLink(href='https://www.mueller-roessner.net/' target='_blank') MMR Müller Müller Rößner Rechtsanwälte Partnerschaft
-                    span= i18n[lang].privacy_policy.created_with.based_in
+                    span= ' ' + i18n[lang].privacy_policy.created_with.based_in
                     | .
