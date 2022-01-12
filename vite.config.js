@@ -14,7 +14,7 @@ module.exports = defineConfig({
 				imprint: resolve(__dirname, 'imprint/index.html'),
 				'en/imprint': resolve(__dirname, 'en/imprint/index.html'),
 				privacy: resolve(__dirname, 'privacy/index.html'),
-				'en/privacy': resolve(__dirname, 'privacy/index.html'),
+				'en/privacy': resolve(__dirname, 'en/privacy/index.html'),
 			},
 		},
 	},
