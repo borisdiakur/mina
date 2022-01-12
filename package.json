@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "trigger": "git commit --allow-empty -m \"🦊\" && git push"
   },
   "devDependencies": {
     "prettier": "^2.5.1",
