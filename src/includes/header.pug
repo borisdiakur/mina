@@ -30,11 +30,13 @@ mixin header(lang, path)
                         if lang === 'de'
                             a(target='' href=(base + 'en/' + path)) EN
                             span.divider |
-                            a(target='' href=(base + 'ja/' + path)) JA
+                            a(target='' href=(base + 'ja/' + path))
+                                b 日本語
                         if lang === 'en'
                             a(target='' href=(base + path)) DE
                             span.divider |
-                            a(target='' href=(base + 'ja/' + path)) JA
+                            a(target='' href=(base + 'ja/' + path))
+                                b 日本語
                         if lang === 'ja'
                             a(target='' href=(base + path)) DE
                             span.divider |
