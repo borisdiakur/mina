@@ -4,7 +4,7 @@ mixin header(lang, path)
     header#header.header
         .header__wrapper
             h1.header__logo(role='banner')
-                a.piano(href=base + i18n[lang].path_prefix aria-label='Mina Nagata' rel='home')
+                a.piano(href=base + i18n[lang].path_prefix aria-label=i18n[lang].mina_nagata rel='home')
                     .piano__top
                     .piano__bottom
                     .piano__left
@@ -17,7 +17,7 @@ mixin header(lang, path)
                     li.menu-item
                         a(target='' href=base + i18n[lang].path_prefix + '#top')= i18n[lang].nav.home
                     li.menu-item
-                        a(target='' href=base + i18n[lang].path_prefix + '#mina-nagata') Mina Nagata
+                        a(target='' href=base + i18n[lang].path_prefix + '#mina-nagata')= i18n[lang].mina_nagata
                     li.menu-item
                         a(target='' href=base + i18n[lang].path_prefix + '#audio-samples')= i18n[lang].nav.audio_samples
                     li.menu-item
@@ -27,5 +27,16 @@ mixin header(lang, path)
                     li.menu-item
                         a(target='' href=base + i18n[lang].path_prefix + '#contact')= i18n[lang].nav.contact
                     li.menu-item
-                        a(target='' href=(lang === 'de' ? base + 'en/' + path : base + path))= lang === 'de' ? 'EN' : 'DE'
+                        if lang === 'de'
+                            a(target='' href=(base + 'en/' + path)) EN
+                            span.divider |
+                            a(target='' href=(base + 'ja/' + path)) JA
+                        if lang === 'en'
+                            a(target='' href=(base + path)) DE
+                            span.divider |
+                            a(target='' href=(base + 'ja/' + path)) JA
+                        if lang === 'ja'
+                            a(target='' href=(base + path)) DE
+                            span.divider |
+                            a(target='' href=(base + 'en/' + path)) EN
                 a.scroll-to-top(href='#top' aria-label=i18n[lang].nav.scroll_to_top) ⇥

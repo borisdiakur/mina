@@ -4,11 +4,11 @@ mixin head(lang)
         script.
           document.documentElement.classList.remove('no-js')
         meta(charset='UTF-8')
-        title Mina Nagata
+        title=i18n[lang].mina_nagata
 
         meta(property='og:site_name' content='minanagata')
-        meta(property='og:locale' content=lang === 'de' ? 'de-DE' : 'en-GB')
-        meta(property='og:title' content='Mina Nagata')
+        meta(property='og:locale' content=lang === 'de' ? 'de_DE' : lang === 'ja' ? 'ja_JP' : 'en_GB')
+        meta(property='og:title' content=i18n[lang].mina_nagata)
         meta(property='og:url' content='https://minanagata.de')
         meta(property='og:type' content='website')
         meta(property='og:image' content='https://minanagata.de/images/mina_nagata_poster.jpg')

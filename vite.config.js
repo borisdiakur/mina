@@ -11,10 +11,13 @@ module.exports = defineConfig({
 			input: {
 				main: resolve(__dirname, 'index.html'),
 				en: resolve(__dirname, 'en/index.html'),
+				ja: resolve(__dirname, 'ja/index.html'),
 				imprint: resolve(__dirname, 'imprint/index.html'),
 				'en/imprint': resolve(__dirname, 'en/imprint/index.html'),
+				'ja/imprint': resolve(__dirname, 'ja/imprint/index.html'),
 				privacy: resolve(__dirname, 'privacy/index.html'),
 				'en/privacy': resolve(__dirname, 'en/privacy/index.html'),
+				'ja/privacy': resolve(__dirname, 'ja/privacy/index.html'),
 			},
 		},
 	},

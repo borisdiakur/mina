@@ -75,6 +75,11 @@
 
   &::before
     content: none
+    
+  .divider
+    margin: 0 8px
+    display: inline-block
+    transform: translateY(-2px)
 
   a
     position: relative
@@ -124,7 +129,11 @@
         height: 100%
         top: -2px
         left: -40px
-
+        
+      &:nth-child(3)
+        &::after
+          left: -82px
+          
 .menu__toggle-label--open
   transition: bottom .3s ease
   position: relative
