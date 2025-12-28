@@ -22,7 +22,7 @@ mixin home(lang)
 
                 h2#audio-samples= i18n[lang].home.audio_samples.heading
                 figure.wp-block-image.alignright
-                    img.wp-image-40(src='/images/mina_nagata_yuko_ellinger_2.jpg' alt='Yuko Ellinger - ' + i18n[lang].home.shared.piano + ' & Mina Nagata - ' + i18n[lang].home.shared.piano)
+                    img.wp-image-40(src='/images/mina_nagata_yuko_ellinger_2.jpg' alt='Yuko Ellinger - ' + i18n[lang].home.shared.piano + ' & ' + i18n[lang].mina_nagata + ' - ' + i18n[lang].home.shared.piano)
                 p(style='text-align: right')
                     em!= 'Nikolai&nbsp;Kapustin<br>Paraphrase in Dizzy Gillespies Manteca ' + i18n[lang].home.audio_samples.for_two_pianos + ', Op.&nbsp;129 '
                     a(href='https://youtu.be/wz54Rv7DnXU' target='_blank' rel='noreferrer noopener') https://youtu.be/wz54Rv7DnXU
@@ -55,9 +55,9 @@ mixin home(lang)
                     br
                     em= 'Azusa Tomimoto – ' + i18n[lang].home.shared.piano
                     br
-                    em= 'Mina Nagata – ' + i18n[lang].home.shared.piano
+                    em= i18n[lang].mina_nagata + ' – ' + i18n[lang].home.shared.piano
                 figure.wp-block-image.alignleft
-                    img.alignleft.wp-image-83.size-full(src='/images/musikalische_weltreise.png' alt='Musikalische Weltreise, Mina Nagata & Yuki Mukai')
+                    img.alignleft.wp-image-83.size-full(src='/images/musikalische_weltreise.png' alt='Musikalische Weltreise, ' + i18n[lang].mina_nagata + ' & Yuki Mukai')
                 p(style='text-align: left')
                     em
                         strong= i18n[lang].home.shared.duet
